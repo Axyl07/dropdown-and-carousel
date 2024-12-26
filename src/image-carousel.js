@@ -8,8 +8,8 @@ export default function carousel() {
   forward.addEventListener("click", () => {
     const currentPosition = slides.getBoundingClientRect();
     let currentLeft = parseInt(currentPosition.left);
-    if (currentLeft > -923) {
-      console.log(currentLeft);
+    console.log(currentLeft);
+    if (currentLeft > -1094) {
       slides.style.left = currentLeft - 360 + "px";
       console.log("forward");
       console.log(slides.style.left);
@@ -21,7 +21,7 @@ export default function carousel() {
     const currentPosition = slides.getBoundingClientRect();
     let currentLeft = parseInt(currentPosition.left);
     console.log(currentLeft);
-    if (currentLeft <= 157) {
+    if (currentLeft <157) {
       slides.style.left = currentLeft + 360 + "px";
       console.log(slides.style.right);
       console.log("backward");
