@@ -1,11 +1,25 @@
-
-body{
-    background-color: peachpuff;
+body {
+  background-color: peachpuff;
 }
 
-.container{
-    overflow: hidden;
+.container {
+  height: 640px;
+  width: 360px;
+  border-radius: 10px;
+  border: 1px solid rgb(234, 0, 255);
+  justify-self: center;
+  box-shadow: 0px 0px 5000000px rgb(255, 0, 85);
+  overflow: hidden;
 }
-.slides{
-    position: absolute;
+.slides {
+  display: flex;
+  width: fit-content;
+  border: 1px solid green;
+  position: relative;
 }
+
+/* .imageCarousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
