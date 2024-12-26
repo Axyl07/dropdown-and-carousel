@@ -21,7 +21,7 @@ export default function carousel() {
     const currentPosition = slides.getBoundingClientRect();
     let currentLeft = parseInt(currentPosition.left);
     console.log(currentLeft);
-    if (currentLeft < 157) {
+    if (currentLeft <= 157) {
       slides.style.left = currentLeft + 360 + "px";
       console.log(slides.style.right);
       console.log("backward");
