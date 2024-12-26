@@ -3,12 +3,10 @@ export default function carousel() {
   const forward = document.querySelector(".forward");
   const backward = document.querySelector(".backward");
   const slides = document.querySelector(".slides");
-  slides.style.position = "absolute";
-    // const currentPosDiv = document.querySelector('.currentpos');
-  forward.addEventListener("click", () => {
+
+  const moveForward = function () {
     const currentPosition = slides.getBoundingClientRect();
-      let currentLeft = parseInt(currentPosition.left);
-    //   currentPosDiv.textContent = currentLeft;
+    let currentLeft = parseInt(currentPosition.left);
     console.log(currentLeft);
     if (currentLeft >= -290) {
       slides.style.left = currentLeft - 360 + "px";
@@ -17,18 +15,24 @@ export default function carousel() {
     } else {
       console.log("last image");
     }
-  });
-  backward.addEventListener("click", () => {
+  };
+
+  const moveBackward = function () {
     const currentPosition = slides.getBoundingClientRect();
-      let currentLeft = parseInt(currentPosition.left);
-    //   currentPosDiv.textContent = currentLeft;
+    let currentLeft = parseInt(currentPosition.left);
     console.log(currentLeft);
-    if (currentLeft <790) {
+    if (currentLeft < 790) {
       slides.style.left = currentLeft + 360 + "px";
       console.log(slides.style.right);
       console.log("backward");
     } else {
       console.log("First image");
     }
+  };
+  forward.addEventListener("click", () => {
+    moveForward();
+  });
+  backward.addEventListener("click", () => {
+    moveBackward();
   });
 }
