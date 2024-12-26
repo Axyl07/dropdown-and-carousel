@@ -3,6 +3,7 @@ body {
 }
 
 .container {
+margin: 25px;
   height: 640px;
   width: 360px;
   border-radius: 10px;
@@ -18,8 +19,26 @@ body {
   position: relative;
 }
 
-/* .imageCarousel{
+.movementButtons{
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
+.jumpCircles
+{
+    /* width: 100vw; */
+    margin: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.jumpCircles > button{
+    
+    border: 1px solid purple;
+    outline: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}

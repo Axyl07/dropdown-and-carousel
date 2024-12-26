@@ -1,8 +1,15 @@
 import "./image-carousel.css";
 export default function carousel() {
-//  setInterval(() => {
-//     moveForward()
-//  }, 5000);
+
+        // const c1 = document.querySelector('#one');
+        // c1.style.backgroundColor = 'black';
+
+
+
+    setInterval(() => {
+    moveForward()
+ }, 5000);
+    
     
   const forward = document.querySelector(".forward");
   const backward = document.querySelector(".backward");
@@ -15,7 +22,8 @@ export default function carousel() {
     test.textContent = slides.style.left
 
 
-  const moveForward = function () {
+    const moveForward = function () {
+
       // const currentPosition = slides.getBoundingClientRect();
       let currentLeft = parseInt(slides.style.left);
       if (currentLeft >= -1080) {
@@ -44,3 +52,9 @@ export default function carousel() {
     moveBackward();
   });
 }
+
+function fillCircle(circleNumber) {
+    const circle = document.querySelector(`#${circleNumber}`);
+    circle.style.backgroundColor = 'black';
+}
+fillCircle('one');
