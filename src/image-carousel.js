@@ -53,8 +53,17 @@ export default function carousel() {
   });
 }
 
-function fillCircle(circleNumber) {
-    const circle = document.querySelector(`#${circleNumber}`);
-    circle.style.backgroundColor = 'black';
-}
-fillCircle('one');
+
+const circleBtns = document.querySelectorAll('.jumpCircles > button');
+circleBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (btn.style.backgroundColor!='black') {
+      btn.style.backgroundColor = 'black';
+      
+    } else {
+      btn.style.backgroundColor = 'white';
+    }
+  
+    
+  })
+})
