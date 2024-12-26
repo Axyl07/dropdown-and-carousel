@@ -1,5 +1,9 @@
 import "./image-carousel.css";
 export default function carousel() {
+ setInterval(() => {
+    moveForward()
+ }, 5000);
+    
   const forward = document.querySelector(".forward");
   const backward = document.querySelector(".backward");
   const slides = document.querySelector(".slides");
