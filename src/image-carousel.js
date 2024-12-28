@@ -134,11 +134,31 @@ export default function carousel() {
   sliderJump();
 
   const moveForward = function () {
+    const ip1 = document.querySelector('#one');
+    const ip2 = document.querySelector('#two');
+    const ip3 = document.querySelector('#three');
+    const ip4 = document.querySelector('#four');
+    const ip5 = document.querySelector('#five');
     // const currentPosition = slides.getBoundingClientRect();
     let currentLeft = parseInt(slides.style.left);
     if (currentLeft >= -1080) {
       // test.textContent = currentLeft;
       slides.style.left = currentLeft - 360 + "px";
+      if (slides.style.left==='0px') {
+        ip1.checked = true;
+      }
+      if (slides.style.left==='-360px') {
+        ip2.checked = true;
+      }
+      if (slides.style.left==='-720px') {
+        ip3.checked = true;
+      }
+      if (slides.style.left==='-1080px') {
+        ip4.checked = true;
+      }
+      if (slides.style.left==='-1440px') {
+        ip5.checked = true;
+      }
       console.log(currentLeft);
       test.textContent = slides.style.left;
     } else {
@@ -147,10 +167,30 @@ export default function carousel() {
   };
 
   const moveBackward = function () {
+    const ip1 = document.querySelector('#one');
+    const ip2 = document.querySelector('#two');
+    const ip3 = document.querySelector('#three');
+    const ip4 = document.querySelector('#four');
+    const ip5 = document.querySelector('#five');
     let currentLeft = parseInt(slides.style.left);
     if (currentLeft < 0) {
       // test.textContent = currentLeft;
       slides.style.left = currentLeft + 360 + "px";
+      if (slides.style.left==='0px') {
+        ip1.checked = true;
+      }
+      if (slides.style.left==='-360px') {
+        ip2.checked = true;
+      }
+      if (slides.style.left==='-720px') {
+        ip3.checked = true;
+      }
+      if (slides.style.left==='-1080px') {
+        ip4.checked = true;
+      }
+      if (slides.style.left==='-1440px') {
+        ip5.checked = true;
+      }
       console.log(currentLeft);
       test.textContent = slides.style.left;
     } else console.log("first image");
